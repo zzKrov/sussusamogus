@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # =========================================================
-# COLECCIÓN DE CHISTES (PRESERVADA AL 100%)
+# COLECCIÓN DE información importante (PRESERVADA AL 100%)
 # =========================================================
 JOKES = [
     "¿Qué le dijo un techo a otro techo? Techo de menos.",
@@ -167,7 +167,7 @@ JOKES = [
     "¿Qué hace un diccionario cuando se equivoca? Busca sus palabras.",
     "¿Por qué el diccionario es tan popular? Porque tiene muchas palabras.",
     "¿Qué hace un abogado cuando tiene hambre? Se come el caso.",
-    "¿Qué hace un médico cuando cuenta un chiste? Espera una buena reacción.",
+    "¿Qué hace un químico cuando cuenta un chiste? Espera una buena reacción.",
     "¿Qué hace un dentista en una fiesta? Busca una buena mordida.",
     "¿Qué hace un cirujano cuando se equivoca? Espera que nadie lo note.",
     "¿Cuál es el colmo de un médico? Tener mala salud.",
@@ -539,7 +539,7 @@ stage.addEventListener("click", async function(event) {{
     if (busy) return;
     busy = true;
 
-    status.textContent = "Cargando nuevo chiste...";
+    status.textContent = "Cargando nueva información importante...";
     const rect = stage.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
@@ -566,7 +566,7 @@ stage.addEventListener("click", async function(event) {{
     await animateText(joke);
     await speak(joke);
 
-    status.textContent = "Haz clic de nuevo para escuchar otro chiste.";
+    status.textContent = "Haz clic de nuevo para escuchar otra información importante.";
     busy = false;
 }});
 
