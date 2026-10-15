@@ -330,12 +330,12 @@ canvas {{
         <canvas id="canvas"></canvas>
         <div id="mouse">🐇</div>
         <div id="joke"></div>
-        <div id="status">Mueve el ratón y haz clic para escuchar un chiste</div>
+        <div id="status">Mueve el wonejito y haz clic para escuchar información importante</div>
     </div>
 </div>
 
 <script>
-const title = "Espacio de Ánimo y Buen Humor";
+const title = "¿Deprimido? ¡Haz clic!";
 const titleElement = document.getElementById("title");
 
 for (let i = 0; i < title.length; i++) {{
@@ -521,14 +521,14 @@ function speak(text) {{
         utterance.volume = 1.0;
 
         utterance.onstart = function() {{
-            status.textContent = "Reproduciendo chiste con voz sintetizada...";
+            status.textContent = "Reproduciendo información importante con voz sintetizada...";
         }};
         utterance.onend = function() {{
-            status.textContent = "Haz clic de nuevo para escuchar otro chiste.";
+            status.textContent = "Haz clic de nuevo para escuchar otra información importante.";
             resolve();
         }};
         utterance.onerror = function() {{
-            status.textContent = "Haz clic de nuevo para escuchar otro chiste.";
+            status.textContent = "Haz clic de nuevo para escuchar otra información importante.";
             resolve();
         }};
         window.speechSynthesis.speak(utterance);
